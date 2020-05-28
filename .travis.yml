@@ -1,4 +1,6 @@
 arch: s390x
 services:
   - docker
-script: docker build -f Dockerfile .
+script: 
+echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+docker build -f Dockerfile .
