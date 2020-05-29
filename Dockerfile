@@ -1,5 +1,5 @@
 #FROM ashish1981/s390x-ibmjava
-FROM "$DOCKER_USERNAME"/s390x-tools
+FROM docker.io/"$DOCKER_USERNAME"/s390x-tools
 ENV CATALINA_HOME /usr/local/tomcat
 ENV PATH $CATALINA_HOME/bin:$PATH
 RUN mkdir -p "$CATALINA_HOME"
